@@ -122,3 +122,42 @@ Added `docs/adoption.md` with:
 - Anti-patterns
 
 This probably should have been in v0.1. Added for v0.2.
+
+---
+
+## 2026-04-23 — Gap: PvA coverage
+
+User feedback (and re-reading): users coming from a plan-of-approach
+background ask "where do my functional requirements, roles, planning,
+and risks go?" Colophon v0.2 had no clear answer. They ended up
+either dropping the content (losing useful information) or writing a
+PvA next to Colophon (defeating the methodology).
+
+Three options considered:
+
+1. Add a sixth core file (Spec or Charter) — breaks the "five files"
+   promise, opens accretion floodgates.
+2. Distribute everything to existing files + tracker — clean, but no
+   home for genuine prototyping/contract-required spec needs.
+3. Hybrid: distribute by default, with one *optional* opt-in Spec for
+   projects that need it.
+
+Picked option 3. Reasoning: keeps the five-files marketing promise
+intact for the default case, gives a real home to projects that
+genuinely need a richer spec, and the explicit "this is opt-in"
+framing prevents drift toward a six-file-default.
+
+Concrete additions in v0.3:
+- Brief gains a documented ten-section structure (it was previously
+  vague, which is partly why people did not put requirements there).
+- README and adoption.md gain a coverage-mapping table: traditional
+  PvA sections → where they live in Colophon.
+- `templates/SPEC.template.md` for the optional case.
+- Decision 0005 documents the choice.
+
+Risks took some thought. Considered making them a separate optional
+file too, but for ~90% of projects "top 3-5 risks with one-line
+mitigation" fits comfortably in the Brief, and risks that need real
+analysis become Decisions anyway. Adding a separate Risks file would
+be the kind of accretion Decision 0001 explicitly forbids. Kept in
+Brief.

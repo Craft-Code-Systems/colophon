@@ -4,6 +4,33 @@ All notable changes to the Colophon methodology are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 Colophon adheres to [Semantic Versioning](https://semver.org).
 
+## [0.3.0] — 2026-04-23
+
+### Added
+- Brief gains a documented ten-section structure (Why, Scope,
+  Success criteria, Capabilities, Non-functional baseline,
+  Stakeholders & roles, Risks, Stack, Status & milestones, Getting
+  started). Previously vague; this clarifies what the Brief should
+  cover.
+- Optional sixth document type: **Spec** (`docs/spec.md`), opt-in,
+  for projects that genuinely need richer requirements documentation.
+  Template in `templates/SPEC.template.md`.
+- `templates/SPEC.template.md` with functional requirements,
+  non-functional requirements, constraints, out-of-scope, open
+  questions, and glossary sections.
+- Coverage-mapping table in README and adoption.md ("A place for
+  everything"): where each kind of project content lives in Colophon.
+- Decision 0005 documenting the coverage approach and Spec opt-in.
+- FAQ entries on requirements coverage, roles, planning, and the
+  optional Spec.
+
+### Changed
+- README expanded with "What the Brief should cover" and "A place for
+  everything" sections.
+- README template updated to demonstrate the full Brief structure.
+- Adoption guide now leads with the coverage mapping before the
+  bootstrap section.
+
 ## [0.2.0] — 2026-04-22
 
 ### Added

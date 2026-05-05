@@ -23,7 +23,7 @@ For applying Colophon to an existing project, see
    - Keep it to one or two screens.
 
 3. **Clean the Decisions folder**
-   - Delete Colophon's own Decisions (`0001-` through `0004-`).
+   - Delete Colophon's own Decisions (`0001-` through `0005-`).
    - Keep `0000-template.md` — it is the sjabloon for your first
      Decision.
 
@@ -35,6 +35,13 @@ For applying Colophon to an existing project, see
    - Empty `docs/research-log.md` — keep the header only.
    - Empty `CHANGELOG.md` down to the header and an `[Unreleased]`
      section.
+
+6. **Optional: add a Spec**
+   - If your project genuinely needs richer requirements documentation
+     (prototyping many capabilities, formal stakeholder requirement),
+     copy `templates/SPEC.template.md` to `docs/spec.md`.
+     Otherwise skip — most projects do not need one. See
+     [adoption.md](./adoption.md#when-to-add-the-optional-spec).
 
 Total time: around ten minutes. You now have a working Colophon setup.
 

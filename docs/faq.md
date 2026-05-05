@@ -12,6 +12,37 @@ alone do not.
 
 ---
 
+**Where do functional requirements, roles, and planning live?**
+Distributed across the right places. Top-level capabilities go in the
+Brief; detailed user stories go in the issue tracker. Roles and
+stakeholders go in the Brief. High-level milestones go in the Brief;
+detailed planning lives in tracker milestones. Risks short enough to
+list go in the Brief; risks that need analysis become Decisions.
+
+The full map of where each kind of content lives is in
+[adoption.md](./adoption.md#a-place-for-everything).
+
+---
+
+**What if my project genuinely needs a detailed requirements document?**
+Use the optional Spec (`docs/spec.md`). A template is in
+`templates/SPEC.template.md`. It is opt-in — most projects do fine
+without it. Add a Spec when you are prototyping and exploring many
+capabilities before implementing any, when a stakeholder formally
+requires it, or when the domain is dense enough to warrant a single
+reference document. See [Decision 0005](./adr/0005-coverage-mapping.md).
+
+---
+
+**Doesn't an optional sixth document break the "five files" promise?**
+The five core files remain unchanged. The Spec is an *opt-in
+extension* — the default Colophon project does not have one, and the
+methodology's promise is that those five suffice for the majority of
+projects. The Spec exists for the genuine minority where the Brief
+plus an issue tracker is not enough.
+
+---
+
 **Why the separate vocabulary — why not just use the filenames?**
 Because talking about Colophon in prose reads better with named roles.
 "Add a Decision" is clearer than "add a file in the ADR folder".
@@ -63,10 +94,11 @@ projects, adapt; the methodology is small enough to port.
 
 ---
 
-**What if my stakeholders demand a plan of approach / requirements doc?**
+**What if my stakeholders demand a formal project plan or requirements document?**
 Write one, on top of Colophon, as a separate deliverable. Colophon is
 how you actually run the project internally; external artefacts are
-their own concern. Often a well-kept Brief is enough, once shown.
+their own concern. Often a well-kept Brief plus the optional Spec is
+enough, once shown.
 
 ---
 

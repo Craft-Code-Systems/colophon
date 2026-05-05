@@ -1,7 +1,72 @@
 # Adoption
 
-How to apply Colophon to an existing project, and how to handle
-structural design changes once you are using it.
+How to apply Colophon to an existing project, how to handle structural
+design changes once you are using it, and where each kind of content
+actually lives.
+
+---
+
+## A place for everything
+
+What about requirements, roles, planning, and risks? They have homes.
+The Brief summarises and orients; Decisions capture trade-offs; the
+issue tracker manages live work; the Runbook handles operations. The
+optional Spec, when present, holds rich requirements detail.
+
+The map below shows where each kind of content lives. The two
+columns reflect the same content seen from different angles —
+**traditional section** for readers used to project plans, **in
+Colophon** for everyone.
+
+| Traditional section                | In Colophon                                                  |
+|------------------------------------|--------------------------------------------------------------|
+| Purpose / problem statement        | Brief — *Why*                                                |
+| Scope                              | Brief — *Scope & non-scope*                                  |
+| Goals / success criteria           | Brief — *Success criteria*                                   |
+| Functional requirements (top)      | Brief — *Capabilities*                                       |
+| Functional requirements (detail)   | Issue tracker (issues, milestones, labels) — or optional Spec |
+| Non-functional baseline            | Brief — *Non-functional baseline*                            |
+| Non-functional trade-offs          | Decisions                                                    |
+| Stakeholders                       | Brief — *Stakeholders & roles*                               |
+| Project organisation / roles       | Brief — *Stakeholders & roles*                               |
+| Planning / milestones (high)       | Brief — *Status & milestones*                                |
+| Planning / milestones (detail)     | Issue tracker milestones                                     |
+| Risks (short)                      | Brief — *Risks*                                              |
+| Risks (large, with mitigation)     | Decisions                                                    |
+| Architecture / design rationale    | Decisions                                                    |
+| Test plan                          | Tests in code + a *Test strategy* paragraph in the Brief or a Decision |
+| Deployment plan                    | Runbook                                                      |
+| Communication plan                 | Outside Colophon — wiki, tracker, or team handbook           |
+
+The principle: **Colophon documents what the project *is*. The issue
+tracker manages what the project *does next*.** Mixing them produces
+documents that drift and trackers that go stale.
+
+### When to add the optional Spec
+
+For projects that genuinely need richer requirements documentation
+than the Brief can hold, Colophon allows an optional sixth file:
+`docs/spec.md`. This is *opt-in* — most projects do fine without one.
+
+Add a Spec when:
+
+- You are in a **prototype phase** exploring many capabilities before
+  implementing any. Listing them as issues feels premature.
+- A **stakeholder formally requires** a written specification (client
+  contract, certification, regulator).
+- The **domain is dense** enough that a single-file reference is
+  genuinely useful.
+
+Do not add a Spec when:
+
+- Capabilities can be expressed as five to fifteen bullets in the Brief.
+- An issue tracker is already in active use — duplicating requirements
+  there is waste.
+- The motivation is "it feels more professional". The absence of a
+  Spec is not unprofessional; it is *deliberate*.
+
+A Spec template is provided at `templates/SPEC.template.md`. See
+[Decision 0005](./adr/0005-coverage-mapping.md) for the full reasoning.
 
 ---
 
