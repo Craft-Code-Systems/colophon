@@ -155,6 +155,6 @@ made and how to keep making it.
 ---
 
 **Where should I report issues or suggest changes?**
-[github.com/ccsys/colophon/issues](https://github.com/ccsys/colophon/issues).
+[github.com/Craft-Code-Systems/colophon/issues](https://github.com/Craft-Code-Systems/colophon/issues).
 Especially welcome: real-world adoption stories, stack-specific
 integration notes, and translations.

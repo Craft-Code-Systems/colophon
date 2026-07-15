@@ -4,6 +4,26 @@ All notable changes to the Colophon methodology are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 Colophon adheres to [Semantic Versioning](https://semver.org).
 
+## [Unreleased]
+
+### Fixed
+- Broken `ccsys/colophon` references replaced with the actual
+  repository slug `Craft-Code-Systems/colophon` (README, runbook, FAQ).
+- LICENSE-TEXT scope corrected: `templates/` is MIT-licensed, not
+  CC BY 4.0, matching what the README and website already claimed.
+- Spec template's Decision 0005 link made absolute so it survives
+  the bootstrap step that deletes Colophon's own Decisions.
+- Stray Dutch word ("sjabloon") in the runbook.
+
+### Changed
+- Decision length guidance relaxed from "under roughly 30 lines" to
+  "roughly one screen", with an explicit carve-out for contested
+  choices — Colophon's own Decisions 0004 and 0005 were violating
+  the old rule.
+- `Rejected` added to the Status vocabulary in the Decision template.
+- The two Decision templates (`docs/adr/0000-template.md` and
+  `templates/ADR.template.md`) synchronised; they had drifted.
+
 ## [0.3.0] — 2026-04-23
 
 ### Added
