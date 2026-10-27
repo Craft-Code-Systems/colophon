@@ -132,6 +132,28 @@ than value for small teams. Start without; add when it saves pain.
 
 ---
 
+**Can I generate an overview page or dashboard of the project?**
+Yes, as tooling, not as a document. A generated view may show anything
+the Colophon files, git history, and the issue tracker already hold —
+status, Decisions, recent changes, which docs have gone stale — as long
+as nobody edits it by hand and it never becomes the place a fact is
+changed. Build it in CI and publish it rather than committing it. See
+[Decision 0006](./adr/0006-generated-views.md) and the
+[Runbook](./runbook.md#generated-views-optional).
+
+---
+
+**Can an AI agent keep the documentation up to date?**
+It can propose updates, the way a colleague would: by editing the
+Colophon files in a pull request. "This change needs a Changelog line",
+"the Brief's status is out of date", and "this looks like a Decision"
+are good things for an agent to flag. What it should not do is keep
+its own account of the project on a separate page: a generated summary
+that says "on track" when the Brief does not is worse than no summary.
+See [Decision 0006](./adr/0006-generated-views.md).
+
+---
+
 **How do I handle secrets or sensitive operational info?**
 Not in Colophon. The Runbook should say *where* to find credentials
 (password manager, vault), not contain them. Never commit secrets,

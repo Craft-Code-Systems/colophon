@@ -6,14 +6,19 @@ Colophon adheres to [Semantic Versioning](https://semver.org).
 
 ## [Unreleased]
 
-### Fixed
-- Broken `ccsys/colophon` references replaced with the actual
-  repository slug `Craft-Code-Systems/colophon` (README, runbook, FAQ).
-- LICENSE-TEXT scope corrected: `templates/` is MIT-licensed, not
-  CC BY 4.0, matching what the README and website already claimed.
-- Spec template's Decision 0005 link made absolute so it survives
-  the bootstrap step that deletes Colophon's own Decisions.
-- Stray Dutch word ("sjabloon") in the runbook.
+### Added
+- Decision 0006: generated views (overview pages, dashboards,
+  documentation sites) are tooling, not documents. Opt-in, derived
+  only from the Colophon files, git history, and the issue tracker;
+  never edited by hand.
+- Runbook section "Generated views (optional)": what a view can show,
+  where each part comes from, and how to build and publish it.
+- FAQ entries on generating an overview page and on AI agents keeping
+  documentation up to date.
+- Reference overview generator in `templates/overview/`: a Python
+  script (standard library only) and a GitHub Actions workflow that
+  publishes the page to GitHub Pages. Inert until copied into a
+  project.
 
 ### Changed
 - Decision length guidance relaxed from "under roughly 30 lines" to
@@ -23,6 +28,17 @@ Colophon adheres to [Semantic Versioning](https://semver.org).
 - `Rejected` added to the Status vocabulary in the Decision template.
 - The two Decision templates (`docs/adr/0000-template.md` and
   `templates/ADR.template.md`) synchronised; they had drifted.
+- Runbook setup step now lists Colophon's own Decisions as `0001-`
+  through `0006-`.
+
+### Fixed
+- Broken `ccsys/colophon` references replaced with the actual
+  repository slug `Craft-Code-Systems/colophon` (README, runbook, FAQ).
+- LICENSE-TEXT scope corrected: `templates/` is MIT-licensed, not
+  CC BY 4.0, matching what the README and website already claimed.
+- Spec template's Decision 0005 link made absolute so it survives
+  the bootstrap step that deletes Colophon's own Decisions.
+- Stray Dutch word ("sjabloon") in the runbook.
 
 ## [0.3.0] — 2026-04-23
 

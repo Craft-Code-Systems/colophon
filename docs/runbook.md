@@ -23,7 +23,7 @@ For applying Colophon to an existing project, see
    - Keep it to one or two screens.
 
 3. **Clean the Decisions folder**
-   - Delete Colophon's own Decisions (`0001-` through `0005-`).
+   - Delete Colophon's own Decisions (`0001-` through `0006-`).
    - Keep `0000-template.md` — it is the template for your first
      Decision.
 
@@ -92,6 +92,68 @@ Signs your Colophon setup is drifting:
 Rule of thumb: if a file has not been touched in a long time *and*
 nobody has needed it in a long time, consider deleting it.
 Colophon files earn their place or leave.
+
+---
+
+## Generated views (optional)
+
+Some teams want one page that shows the whole project at a glance.
+Generate it; never write it. The rules are in
+[Decision 0006](./adr/0006-generated-views.md). In short: every fact
+comes from the Colophon files, git, or the issue tracker, and nobody
+edits the page by hand.
+
+What a view can show, and where each part comes from:
+
+| On the page                | Source                                     |
+|----------------------------|--------------------------------------------|
+| Status & milestones        | The Brief's section, shown verbatim        |
+| Decisions and their status | The `**Status:**` line of each Decision    |
+| Latest version and changes | The top section of the Changelog           |
+| Latest exploration         | The newest dated entry in the Log          |
+| Milestone progress         | The issue tracker's API                    |
+| Doc freshness              | `git log` per Colophon file                |
+
+Most of it is a few lines of shell. For example:
+
+```
+grep -H '^\*\*Status:\*\*' docs/adr/*.md | grep -v 0000-template
+for f in README.md CHANGELOG.md docs/runbook.md docs/research-log.md; do
+  printf '%s  %s\n' "$(git log -1 --format=%cs -- "$f")" "$f"
+done
+```
+
+Colophon ships a reference generator built on these sources in
+`templates/overview/`. It needs Python 3.8+ and git, nothing else:
+
+1. Copy `templates/overview/overview.py` to `scripts/overview.py`.
+2. Copy `templates/overview/overview.yml` to
+   `.github/workflows/overview.yml`.
+3. In the repository's *Settings → Pages*, set *Source* to
+   *GitHub Actions*.
+4. Push to the main branch.
+
+The page then rebuilds on every push and once a day. To build it
+locally, run `python3 scripts/overview.py --out _site` and add `_site/`
+to `.gitignore`. Until copied, the files in `templates/` do nothing, so
+the overview stays opt-in.
+
+Running it:
+
+- Keep the script and the workflow in the project's own repository;
+  only the generated page stays out of git.
+- Build the page in CI on every push to the main branch and publish it
+  (GitHub Pages, GitLab Pages, or a build artefact). Do not commit it.
+- If it must be committed, let only the CI job write it, and mark it
+  as generated in `.gitattributes` so diffs and reviews skip it:
+  ```
+  docs/overview.html linguist-generated=true
+  ```
+- If a language model writes a summary paragraph, label it as
+  generated and link it to the files it read. Let it paraphrase the
+  Brief, not judge the project.
+- Doc freshness is the most useful signal: a Runbook untouched for
+  months while the deploy code changed weekly is drift you can see.
 
 ---
 
