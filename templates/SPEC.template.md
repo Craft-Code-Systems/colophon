@@ -8,7 +8,8 @@
 > capabilities before implementing any, (b) a stakeholder formally
 > requires it, or (c) the domain is dense enough that a single
 > reference document genuinely helps. See
-> [Decision 0005](./adr/0005-coverage-mapping.md).
+> [Decision 0005](https://github.com/Craft-Code-Systems/colophon/blob/main/docs/adr/0005-coverage-mapping.md)
+> in the upstream Colophon repository.
 
 ---
 

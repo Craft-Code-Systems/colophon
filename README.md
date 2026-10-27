@@ -163,7 +163,7 @@ documents that drift and trackers that go stale.
 
 1. Click **Use this template** on GitHub, or:
    ```
-   gh repo create my-project --template ccsys/colophon
+   gh repo create my-project --template Craft-Code-Systems/colophon
    ```
 2. Rewrite the Brief (`README.md`) for your project — see the
    "What the Brief should cover" section above.

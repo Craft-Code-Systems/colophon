@@ -1,7 +1,7 @@
 Colophon methodology text
 Copyright (c) 2026 Craft Code Systems
 
-The *methodology text* in this repository (README.md, docs/, and templates/)
+The *methodology text* in this repository (README.md and docs/)
 is licensed under the Creative Commons Attribution 4.0 International License
 (CC BY 4.0).
 
@@ -24,5 +24,7 @@ Under the following terms:
     technological measures that legally restrict others from doing
     anything the license permits.
 
-The *template code and repository scaffolding* is licensed separately
-under the MIT License — see LICENSE.
+The *template files and repository scaffolding* (templates/ and all
+files intended to be copied into user projects) are licensed separately
+under the MIT License — see LICENSE. Copying a template into your own
+project requires no attribution.

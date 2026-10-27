@@ -1,6 +1,6 @@
 # Decision NNNN: Short title of the decision
 
-**Status:**      Proposed | Accepted | Superseded by [Decision NNNN](./NNNN-....md) | Deprecated
+**Status:**      Proposed | Accepted | Rejected | Superseded by [Decision NNNN](./NNNN-....md) | Deprecated
 **Date:**        YYYY-MM-DD
 **Supersedes:**  [Decision NNNN](./NNNN-....md)   *(optional — remove line if none)*
 
@@ -32,7 +32,8 @@ or be built? What becomes harder?
 
 ---
 
-*Keep Decisions under roughly 30 lines. Once accepted, do not edit
-the Decision itself — write a superseding Decision if the situation
-changes. See [adoption.md](../adoption.md) for the full supersession
-mechanism.*
+*Keep Decisions to roughly one screen. Genuinely contested choices
+may need a longer Context — that is fine; padding is not. Once
+accepted, do not edit the Decision itself — write a superseding
+Decision if the situation changes. See [adoption.md](../adoption.md)
+for the full supersession mechanism.*

@@ -12,7 +12,7 @@ For applying Colophon to an existing project, see
 
 1. **Create from template**
    ```
-   gh repo create my-project --template ccsys/colophon --public
+   gh repo create my-project --template Craft-Code-Systems/colophon --public
    cd my-project
    ```
    Or click **Use this template** on GitHub.
@@ -24,7 +24,7 @@ For applying Colophon to an existing project, see
 
 3. **Clean the Decisions folder**
    - Delete Colophon's own Decisions (`0001-` through `0006-`).
-   - Keep `0000-template.md` — it is the sjabloon for your first
+   - Keep `0000-template.md` — it is the template for your first
      Decision.
 
 4. **Rewrite the Runbook**
@@ -51,7 +51,7 @@ Total time: around ten minutes. You now have a working Colophon setup.
 
 - **Made a real design choice?** → add a Decision in `docs/adr/`.
   Copy `0000-template.md`, increment the number, fill it in.
-  Keep it under 30 lines.
+  Keep it to roughly one screen.
 - **Explored something, found facts worth keeping?** → append a
   dated entry to the Log. Do not rewrite older entries.
 - **Shipped something?** → add a line to the Changelog under
