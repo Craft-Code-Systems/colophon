@@ -4,6 +4,22 @@ All notable changes to the Colophon methodology are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 Colophon adheres to [Semantic Versioning](https://semver.org).
 
+## [Unreleased]
+
+### Added
+- Decision 0006: generated views (overview pages, dashboards,
+  documentation sites) are tooling, not documents. Opt-in, derived
+  only from the Colophon files, git history, and the issue tracker;
+  never edited by hand.
+- Runbook section "Generated views (optional)": what a view can show,
+  where each part comes from, and how to build and publish it.
+- FAQ entries on generating an overview page and on AI agents keeping
+  documentation up to date.
+
+### Changed
+- Runbook setup step now lists Colophon's own Decisions as `0001-`
+  through `0006-`.
+
 ## [0.3.0] — 2026-04-23
 
 ### Added
