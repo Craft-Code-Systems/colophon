@@ -123,8 +123,25 @@ for f in README.md CHANGELOG.md docs/runbook.md docs/research-log.md; do
 done
 ```
 
+Colophon ships a reference generator built on these sources in
+`templates/overview/`. It needs Python 3.8+ and git, nothing else:
+
+1. Copy `templates/overview/overview.py` to `scripts/overview.py`.
+2. Copy `templates/overview/overview.yml` to
+   `.github/workflows/overview.yml`.
+3. In the repository's *Settings → Pages*, set *Source* to
+   *GitHub Actions*.
+4. Push to the main branch.
+
+The page then rebuilds on every push and once a day. To build it
+locally, run `python3 scripts/overview.py --out _site` and add `_site/`
+to `.gitignore`. Until copied, the files in `templates/` do nothing, so
+the overview stays opt-in.
+
 Running it:
 
+- Keep the script and the workflow in the project's own repository;
+  only the generated page stays out of git.
 - Build the page in CI on every push to the main branch and publish it
   (GitHub Pages, GitLab Pages, or a build artefact). Do not commit it.
 - If it must be committed, let only the CI job write it, and mark it

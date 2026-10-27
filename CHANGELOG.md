@@ -15,6 +15,10 @@ Colophon adheres to [Semantic Versioning](https://semver.org).
   where each part comes from, and how to build and publish it.
 - FAQ entries on generating an overview page and on AI agents keeping
   documentation up to date.
+- Reference overview generator in `templates/overview/`: a Python
+  script (standard library only) and a GitHub Actions workflow that
+  publishes the page to GitHub Pages. Inert until copied into a
+  project.
 
 ### Changed
 - Decision length guidance relaxed from "under roughly 30 lines" to
